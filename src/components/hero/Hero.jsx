@@ -1,5 +1,6 @@
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import banner from "../../assets/banner-main.png";
 
 export default function Hero({ addMoney }) {
   const handleClaimCredit = () => {
@@ -27,7 +28,7 @@ export default function Hero({ addMoney }) {
       <div className="hero-content text-center">
         <div className="max-w-2xl flex flex-col items-center justify-center">
           <img
-            src="src/assets/banner-main.png"
+            src={banner}
             alt="Cricket Icon"
             className="w-[248px] mx-auto mb-4"
           />

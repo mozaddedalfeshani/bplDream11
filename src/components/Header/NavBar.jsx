@@ -1,10 +1,11 @@
 import coin from "../../assets/coin.png";
+import logo from "../../assets/logo.png";
 export default function NavBar({ money }) {
   return (
     <div className=" mb-2 ">
       <div className="navbar bg-base-100 p-3 container mx-auto">
         <div className="flex-1">
-          <img src="src\assets\logo.png" className="h-[72px] w-[73.16px]" />
+          <img src={logo} className="h-[72px] w-[73.16px]" />
         </div>
 
         <div className="flex-none">

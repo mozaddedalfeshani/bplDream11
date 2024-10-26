@@ -2,7 +2,7 @@ import logo from "../../assets/logo-footer.png";
 
 export default function Footer() {
   return (
-    <div className="bg-[#040D11] text-white p-10 mt-40">
+    <div className="bg-[#040D11] text-white p-10 mt-56">
       <div className="container mx-auto">
         {/* Newsletter Section */}
         <div className="bg-gradient-to-r from-blue-200 to-orange-200 rounded-lg p-8 mb-8 text-center -mt-48 py-20">
