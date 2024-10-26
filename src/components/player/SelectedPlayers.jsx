@@ -1,4 +1,6 @@
 import deleteIcon from "../../assets/delete.png";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const SelectedPlayers = ({
   selectedPlayers,
@@ -13,10 +15,22 @@ const SelectedPlayers = ({
     setSelectedPlayers((prevSelected) =>
       prevSelected.filter((p) => p.name !== player.name)
     );
+
+    // Show success toast notification
+    toast.success(`${player.name} has been removed from your team`, {
+      position: "top-right",
+      autoClose: 3000,
+      hideProgressBar: true,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+    });
   };
 
   return (
     <div className="player-card">
+      <ToastContainer />
       {selectedPlayers.map((player, index) => (
         <div
           key={index}
@@ -38,22 +52,18 @@ const SelectedPlayers = ({
               </div>
             </div>
             <button
-              className=" ml-auto"
+              className="ml-auto"
               onClick={() => handleRemovePlayer(player)}>
               <img src={deleteIcon} className="w-8" alt="Delete Icon" />
             </button>
           </div>
-
-          {/* Optionally remove the hr */}
-          {/* {index !== selectedPlayers.length - 1 && (
-      <hr className="border-t-2 border-gray-300 my-2" />
-    )} */}
         </div>
       ))}
       <button
         className="p-1 font-bold border-[#E7FE29] border rounded-lg"
         onClick={() => {
-          setCount(false), console.log("clli");
+          setCount(false);
+          console.log("Add more players clicked");
         }}>
         <div className="bg-[#eeff59] flex justify-center items-center text-center w-[150px] h-10 rounded-lg font-medium">
           Add More Players
