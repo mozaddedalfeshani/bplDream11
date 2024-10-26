@@ -1,0 +1,50 @@
+const SelectedPlayers = ({ selectedPlayers, setSelectedPlayers, setMoney }) => {
+  const handleRemovePlayer = (player) => {
+    setMoney((prevMoney) => prevMoney + Number(player.price));
+
+    // Remove player from selected list
+    setSelectedPlayers((prevSelected) =>
+      prevSelected.filter((p) => p.name !== player.name)
+    );
+  };
+
+  return (
+    <div className="player-card">
+      {selectedPlayers.map((player, index) => (
+        <div
+          key={index}
+          className="player-info card my-2 p-4 shadow-lg rounded-md flex flex-col">
+          <div className="flex flex-row items-center justify-between mb-2">
+            <div className="flex flex-row items-center">
+              <img
+                src={player.image}
+                className="w-12 h-12 rounded-full mr-4"
+                alt={`${player.name}'s image`}
+              />
+              <div>
+                <div className="player-name text-lg font-semibold">
+                  {player.name}
+                </div>
+                <div className="batting-hand text-sm text-gray-600">
+                  {player.role} ({player.country}) - Price: {player.price}
+                </div>
+              </div>
+            </div>
+            <button
+              className="btn btn-error ml-auto"
+              onClick={() => handleRemovePlayer(player)}>
+              Remove
+            </button>
+          </div>
+
+          {/* Optionally remove the hr */}
+          {/* {index !== selectedPlayers.length - 1 && (
+      <hr className="border-t-2 border-gray-300 my-2" />
+    )} */}
+        </div>
+      ))}
+    </div>
+  );
+};
+
+export default SelectedPlayers;

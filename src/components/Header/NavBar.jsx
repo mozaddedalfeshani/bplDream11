@@ -1,31 +1,30 @@
-export default function NavBar() {
+export default function NavBar({ money }) {
   return (
-    <div>
-      <p>This is nav bar</p>
-      <div className="navbar bg-base-100">
+    <div className=" mb-2 ">
+      <div className="navbar bg-base-100 p-3 container mx-auto">
         <div className="flex-1">
-          <a className="btn btn-ghost text-xl">daisyUI</a>
+          <img src="src\assets\logo.png" className="h-[72px] w-[73.16px]" />
         </div>
+
         <div className="flex-none">
           <ul className="menu menu-horizontal px-1">
             <li>
               <a>Link</a>
             </li>
             <li>
-              <details>
-                <summary>Parent</summary>
-                <ul className="bg-base-100 rounded-t-none p-2">
-                  <li>
-                    <a>Link 1</a>
-                  </li>
-                  <li>
-                    <a>Link 2</a>
-                  </li>
-                </ul>
-              </details>
+              <a>Fixture</a>
+            </li>
+            <li>
+              <a>Teams</a>
+            </li>
+            <li>
+              <a>Scedules</a>
             </li>
           </ul>
         </div>
+        <button className="btn min-w-[125px] text-[16px] btn-[#ffffff]">
+          {money} Coin
+        </button>
       </div>
     </div>
   );

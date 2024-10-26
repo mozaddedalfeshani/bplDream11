@@ -1,0 +1,74 @@
+[
+  {
+    "name": "Ben Stokes",
+    "country": "England",
+    "role": "All-Rounder",
+    "rating": "Left-Hand-Bat",
+    "price": "1800",
+    "image": "https://e0.365dm.com/22/06/2048x1152/skysports-pa-ben-stokes-england_5805019.jpg?20220614201751",
+    "buttonText": "Choose Player"
+  },
+  {
+    "name": "Steve Smith",
+    "country": "Australia",
+    "role": "Batsman",
+    "rating": "Right-Hand-Bat",
+    "price": "1700",
+    "image": "https://i3.wp.com/wallpapers.com/images/featured/steve-smith-pictures-plqsoal1luugiyt3.jpg?strip=all3",
+    "buttonText": "Choose Player"
+  },
+  {
+    "name": "Kane Williamson",
+    "country": "New Zealand",
+    "role": "Batsman",
+    "rating": "Right-Hand-Bat",
+    "price": "1600",
+    "image": "https://wd-image.webdunia.com/image-conversion/process-aws.php?url=https://nonprod-media.webdunia.com/public_html/_media/en/img/article/2023-10/09/full/1696833947-5275.png&w=&h=&outtype=webp",
+    "buttonText": "Choose Player"
+  },
+  {
+    "name": "Rashid Khan",
+    "country": "Afghanistan",
+    "role": "Bowler",
+    "rating": "Right-Hand-Bat",
+    "price": "1200",
+    "image": "https://bbsr.one/wp-content/uploads/2023/05/Rashid-Khan.webp",
+    "buttonText": "Choose Player"
+  },
+  {
+    "name": "Babar Azam",
+    "country": "Pakistan",
+    "role": "Batsman",
+    "rating": "Right-Hand-Bat",
+    "price": "1500",
+    "image": "https://crictoday.com/wp-content/uploads/2023/04/Untitled-design.jpg",
+    "buttonText": "Choose Player"
+  },
+  {
+    "name": "Trent Boult",
+    "country": "New Zealand",
+    "role": "Bowler",
+    "rating": "Left-Hand-Bat",
+    "price": "1400",
+    "image": "https://tds-images.thedailystar.net/sites/default/files/styles/very_big_201/public/feature/images/trent_boult_0_0.jpg",
+    "buttonText": "Choose Player"
+  },
+  {
+    "name": "Quinton de Kock",
+    "country": "South Africa",
+    "role": "Wicketkeeper-Batsman",
+    "rating": "Left-Hand-Bat",
+    "price": "1300",
+    "image": "https://media.sportstiger.com/media/quinton-de-kock-1700197834548-original.jpg",
+    "buttonText": "Choose Player"
+  },
+  {
+    "name": "David Warner",
+    "country": "Australia",
+    "role": "Batsman",
+    "rating": "Left-Hand-Bat",
+    "price": "1500",
+    "image": "https://www.deccanchronicle.com/h-upload/2024/10/25/1855898-davidwarner.webp",
+    "buttonText": "Choose Player"
+  }
+]

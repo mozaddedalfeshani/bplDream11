@@ -1,18 +1,28 @@
+import { useState } from "react";
 import "./App.css";
 import NavBar from "./components/Header/NavBar";
+import Hero from "./components/hero/Hero";
+import PlayerToggle from "./components/main/PlayerToggle";
 
 function App() {
+  const [money, setMoney] = useState(0); // Initialize money with 0
+  const [selectedPlayers, setSelectedPlayers] = useState([]); // State for selected players
+
+  const addMoney = () => {
+    setMoney(money + 200000);
+  };
+
   return (
     <>
-      {/* container {
-      navbar, 
-      hero section,
-      product catagory 
-  }
-    about page */}
-      <div className="container">
-        {/* Navbar + */}
-        <NavBar></NavBar>
+      <NavBar money={money} />
+      <div className="container mx-auto">
+        <Hero addMoney={addMoney} />
+        <PlayerToggle
+          money={money}
+          setMoney={setMoney}
+          selectedPlayers={selectedPlayers}
+          setSelectedPlayers={setSelectedPlayers}
+        />
       </div>
     </>
   );
