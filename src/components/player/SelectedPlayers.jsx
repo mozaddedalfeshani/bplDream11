@@ -17,15 +17,17 @@ const SelectedPlayers = ({
     );
 
     // Show success toast notification
-    toast.success(`${player.name} has been removed from your team`, {
-      position: "top-right",
-      autoClose: 3000,
-      hideProgressBar: true,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-      progress: undefined,
-    });
+    setTimeout(() => {
+      toast.success(`${player.name} has been removed from your team`, {
+        position: "top-right",
+        autoClose: 3000,
+        hideProgressBar: true,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+      });
+    }, 0);
   };
 
   return (

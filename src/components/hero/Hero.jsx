@@ -1,11 +1,29 @@
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 export default function Hero({ addMoney }) {
+  const handleClaimCredit = () => {
+    addMoney(); // Call the function to add money
+    setTimeout(() => {
+      toast.success("Free credit claimed successfully!", {
+        position: "top-right",
+        autoClose: 3000,
+        hideProgressBar: true,
+        closeOnClick: false,
+        pauseOnHover: false,
+        draggable: false,
+      });
+    }, 0);
+  };
+
   return (
     <div
-      className="hero w-full rounded-2xl "
+      className="hero w-full rounded-2xl"
       style={{
         backgroundImage:
           "linear-gradient(45deg, #a1a1aa 0%, #000000 50%, #9b8d8b 90%, white 100%)",
       }}>
+      <ToastContainer />
       <div className="hero-content text-center">
         <div className="max-w-2xl flex flex-col items-center justify-center">
           <img
@@ -19,12 +37,10 @@ export default function Hero({ addMoney }) {
           <p className="text-white text-opacity-70 text-xl mt-2">
             Beyond Boundaries Beyond Limits
           </p>
-
           <button
-            className=" p-1 font-bold border-[#E7FE29] border rounded-lg"
-            onClick={() => addMoney()} // Call the function here for adding money to state....
-          >
-            <div className="bg-[#eeff59] flex justify-center items-center  text-center  w-[150px] h-10 rounded-lg">
+            className="p-1 font-bold border-[#E7FE29] border rounded-lg"
+            onClick={handleClaimCredit}>
+            <div className="bg-[#eeff59] flex justify-center items-center text-center w-[150px] h-10 rounded-lg">
               Claim Free Credit
             </div>
           </button>
