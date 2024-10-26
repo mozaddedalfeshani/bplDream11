@@ -1,3 +1,4 @@
+import coin from "../../assets/coin.png";
 export default function NavBar({ money }) {
   return (
     <div className=" mb-2 ">
@@ -9,7 +10,7 @@ export default function NavBar({ money }) {
         <div className="flex-none">
           <ul className="menu menu-horizontal px-1">
             <li>
-              <a>Link</a>
+              <a href="#">Home</a>
             </li>
             <li>
               <a>Fixture</a>
@@ -22,8 +23,8 @@ export default function NavBar({ money }) {
             </li>
           </ul>
         </div>
-        <button className="btn min-w-[125px] text-[16px] btn-[#ffffff]">
-          {money} Coin
+        <button className="border border-black rounded-md p-2 font-medium min-w-[125px] text-[16px] btn-[#ffffff]">
+          {money} Coin <img src={coin} className="w-6" />
         </button>
       </div>
     </div>

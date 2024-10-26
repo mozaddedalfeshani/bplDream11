@@ -78,6 +78,7 @@ function PlayerToggle({
             selectedPlayers={selectedPlayers}
             setSelectedPlayers={setSelectedPlayers}
             setMoney={setMoney} // Pass setMoney to SelectedPlayers
+            setCount={setSelected}
           /> // Render selected players
         ) : (
           <Players

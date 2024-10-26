@@ -1,6 +1,11 @@
 export default function Hero({ addMoney }) {
   return (
-    <div className="hero w-full rounded-2xl bg-gradient-to-r py-3 from-[#a1a1aa] via-[#000000] to-[#9b8d8b]">
+    <div
+      className="hero w-full rounded-2xl "
+      style={{
+        backgroundImage:
+          "linear-gradient(45deg, #a1a1aa 0%, #000000 50%, #9b8d8b 90%, white 100%)",
+      }}>
       <div className="hero-content text-center">
         <div className="max-w-2xl flex flex-col items-center justify-center">
           <img
@@ -16,10 +21,10 @@ export default function Hero({ addMoney }) {
           </p>
 
           <button
-            className="btn p-3 border-[rgba(231,254,41,1)] border"
-            onClick={() => addMoney()} // Call the function here
+            className=" p-1 font-bold border-[#E7FE29] border rounded-lg"
+            onClick={() => addMoney()} // Call the function here for adding money to state....
           >
-            <div className="bg-[#eeff59] text-center m-1">
+            <div className="bg-[#eeff59] flex justify-center items-center  text-center  w-[150px] h-10 rounded-lg">
               Claim Free Credit
             </div>
           </button>

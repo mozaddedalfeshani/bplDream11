@@ -1,6 +1,11 @@
 import deleteIcon from "../../assets/delete.png";
 
-const SelectedPlayers = ({ selectedPlayers, setSelectedPlayers, setMoney }) => {
+const SelectedPlayers = ({
+  selectedPlayers,
+  setSelectedPlayers,
+  setMoney,
+  setCount,
+}) => {
   const handleRemovePlayer = (player) => {
     setMoney((prevMoney) => prevMoney + Number(player.price));
 
@@ -45,6 +50,15 @@ const SelectedPlayers = ({ selectedPlayers, setSelectedPlayers, setMoney }) => {
     )} */}
         </div>
       ))}
+      <button
+        className="p-1 font-bold border-[#E7FE29] border rounded-lg"
+        onClick={() => {
+          setCount(false), console.log("clli");
+        }}>
+        <div className="bg-[#eeff59] flex justify-center items-center text-center w-[150px] h-10 rounded-lg font-medium">
+          Add More Players
+        </div>
+      </button>
     </div>
   );
 };

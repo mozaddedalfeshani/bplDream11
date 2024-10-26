@@ -1,4 +1,3 @@
-import React from "react";
 import playersData from "../../assets/playerinfo.json";
 import PlayerCard from "./PlayerCard";
 
