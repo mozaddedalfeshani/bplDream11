@@ -67,6 +67,6 @@ To run this project locally:
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/yourusername/BPL-Dream11.git
+   git clone https://github.com/mozaddedalfeshani/BPL-Dream11.git
    cd BPL-Dream11
    ```
