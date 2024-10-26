@@ -1,3 +1,5 @@
+import deleteIcon from "../../assets/delete.png";
+
 const SelectedPlayers = ({ selectedPlayers, setSelectedPlayers, setMoney }) => {
   const handleRemovePlayer = (player) => {
     setMoney((prevMoney) => prevMoney + Number(player.price));
@@ -31,9 +33,9 @@ const SelectedPlayers = ({ selectedPlayers, setSelectedPlayers, setMoney }) => {
               </div>
             </div>
             <button
-              className="btn btn-error ml-auto"
+              className=" ml-auto"
               onClick={() => handleRemovePlayer(player)}>
-              Remove
+              <img src={deleteIcon} className="w-8" alt="Delete Icon" />
             </button>
           </div>
 
