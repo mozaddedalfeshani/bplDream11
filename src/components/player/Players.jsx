@@ -9,15 +9,18 @@ const Players = ({ money, setMoney, selectedPlayers, setSelectedPlayers }) => {
     const alreadySelected = selectedPlayers.some((p) => p.name === player.name);
 
     if (alreadySelected) {
-      toast.warning("This player is already selected.", {
-        position: "top-right",
-        autoClose: 3000,
-        hideProgressBar: true,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-      });
+      setTimeout(() => {
+        toast.warning("This player is already selected.", {
+          position: "top-right",
+          autoClose: 3000,
+          hideProgressBar: true,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+        });
+      }, 1000); // Delay by 1 second (1000 milliseconds)
+
       return;
     }
 
@@ -27,7 +30,7 @@ const Players = ({ money, setMoney, selectedPlayers, setSelectedPlayers }) => {
         position: "top-right",
         autoClose: 3000,
         hideProgressBar: true,
-        closeOnClick: true,
+        // closeOnClick: true,
         pauseOnHover: true,
         draggable: true,
         progress: undefined,
@@ -41,29 +44,32 @@ const Players = ({ money, setMoney, selectedPlayers, setSelectedPlayers }) => {
     // Deduct the price from money and update the state if player is not already selected
     if (money >= playerPrice) {
       setMoney(money - playerPrice);
-      setSelectedPlayers([
-        ...selectedPlayers,
+      setSelectedPlayers((prevSelectedPlayers) => [
+        ...prevSelectedPlayers,
         { ...player, price: playerPrice },
-      ]); // Add the player to the selected players list
-      toast.success(`${player.name} has been added to your team!`, {
-        position: "top-right",
-        autoClose: 3000,
-        hideProgressBar: true,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-      });
+      ]);
+
+      setTimeout(() => {
+        toast.success(`${player.name} has been added to your team!`, {
+          position: "top-right",
+          autoClose: 3000,
+          hideProgressBar: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+        });
+      }, 100);
     } else {
-      toast.error("Not enough money to select this player.", {
-        position: "top-right",
-        autoClose: 3000,
-        hideProgressBar: true,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-      });
+      setTimeout(() => {
+        toast.error("Not enough money to select this player.", {
+          position: "top-right",
+          autoClose: 3000,
+          hideProgressBar: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+        });
+      }, 100);
     }
   };
 

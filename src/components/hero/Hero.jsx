@@ -10,7 +10,7 @@ export default function Hero({ addMoney }) {
         position: "top-right",
         autoClose: 3000,
         hideProgressBar: true,
-        closeOnClick: false,
+        // closeOnClick: true,
         pauseOnHover: false,
         draggable: false,
       });

@@ -22,8 +22,8 @@ const SelectedPlayers = ({
         position: "top-right",
         autoClose: 3000,
         hideProgressBar: true,
-        closeOnClick: true,
-        pauseOnHover: true,
+        // closeOnClick: false,
+        pauseOnHover: false,
         draggable: true,
         progress: undefined,
       });
